@@ -9,8 +9,8 @@
             set { adresse = value; }
         }
 
-        private string complement;
-        public string Complement
+        private int? complement;
+        public int? Complement
         {
             get { return complement; }
             set { complement = value; }
@@ -38,13 +38,13 @@
             set { pays = value; }
         }
 
-        public Lieu(string adresse, string complement, int cp, string ville, string pays)
+        public Lieu(string adresse, int cp, string ville, string pays, int? complement)
         {
             Adresse = adresse;
-            Complement = complement;
             CP = cp;
             Ville = ville;
             Pays = pays;
+            Complement = complement;
         }
     }
 }

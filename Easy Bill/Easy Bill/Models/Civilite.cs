@@ -2,6 +2,6 @@
 {
     public enum Civilite
     {
-        Monsieur, Madame, Mademoiselle
+        Monsieur, Madame
     }
 }

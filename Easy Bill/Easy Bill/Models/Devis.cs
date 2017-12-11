@@ -7,7 +7,7 @@ namespace Easy_Bill.Models
 {
     public class Devis
     {
-        public string Reference { get; private set; }
+        public string DevisId { get; private set; }
 
         private string objet;
         public string Objet
@@ -45,8 +45,30 @@ namespace Easy_Bill.Models
             set { monnaie = value; }
         }
 
-        public List<Article> Articles { get; private set; }
+        public List<IArticle> Articles { get; private set; }
 
         public int Total => Articles.Sum(a => a.Total);
+
+        public Devis(string sujet, DateTime date, string commentaire, TypeReglement type, Monnaie typeMonnaie)
+        {
+            Random rand = new Random();
+            Objet = sujet;
+            Date = date;
+            TypeReglement = type;
+            Note = commentaire;
+            Monnaie = typeMonnaie;
+
+            Articles = new List<IArticle>();
+            DevisId = "D" + date.ToShortDateString() + rand.Next(1000, 9999);
+        }
+
+        public void ajouterArticle(IArticle article)
+        {
+            Articles.Add(article);
+        }
+        public bool supprimerArticle(IArticle article)
+        {
+            return Articles.Remove(article);
+        }
     }
 }

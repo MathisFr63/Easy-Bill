@@ -148,6 +148,8 @@
     </Compile>
     <Compile Include="Models\Devis.cs" />
     <Compile Include="Models\Article.cs" />
+    <Compile Include="Models\IArticle.cs" />
+    <Compile Include="Models\IDevis.cs" />
     <Compile Include="Models\Lieu.cs" />
     <Compile Include="Models\Civilite.cs" />
     <Compile Include="Models\Client.cs" />
@@ -155,7 +157,7 @@
     <Compile Include="Models\Monnaie.cs" />
     <Compile Include="Models\Personne.cs" />
     <Compile Include="Models\Type.cs" />
-    <Compile Include="Models\TypeReglement.cs" />
+    <Compile Include="Scripts\TypeReglement.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

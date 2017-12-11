@@ -1,6 +1,6 @@
 ﻿namespace Easy_Bill.Models
 {
-    public class Article
+    public class Article : IArticle
     {
         private string nom;
         public string Nom

@@ -26,7 +26,7 @@ namespace Easy_Bill.Models
         public Lieu Adresse { get; private set; }
 
         // Liste des devis liés à l'entreprise
-        public List<Devis> Devis { get; private set; }
+        public List<IDevis> Devis { get; private set; }
 
 
         public Entité(string nom, string siteWeb, Personne personne, Lieu lieu)
